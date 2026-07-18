@@ -8,7 +8,7 @@ Recommended repository name: `exam-date-alert`
 
 ## Domain candidates
 
-First candidate: `examdate.jp`
+Confirmed domain: `examdate.jp`
 
 Other candidates:
 
