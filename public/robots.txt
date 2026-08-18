@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://exam-date-alert.vercel.app/sitemap.xml
+Sitemap: https://examdate.jp/sitemap.xml
