@@ -1,7 +1,4 @@
-# Exam Date Alert
+# examdate.jp
 
-行政書士、宅建、FPなどの試験日、申込期限、出題予想を通知し、教材・模試へ送客する。
-
-Notification channels: LINE, X, email, Slack
-Revenue: 教材販売, 模試販売, 講座送客, メールスポンサー, 月額課金
-Primary categories: 試験日, 申込期限, 出題予想, 教材, 模試
+このサイトは準備中です。掲載できる情報が揃うまで、内容の公開を見合わせています。
+現時点で参照できるデータはありません。
