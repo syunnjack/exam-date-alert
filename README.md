@@ -1,49 +1,29 @@
-# Exam Date Alert
+# 資格試験ガイド（examdate.jp）
 
-試験日程・出題予想通知
+主要17試験について、**主催団体・試験区分・実施の傾向・公式の日程ページ**をまとめた静的サイト。
 
-## Repository
+## 試験日を載せていない理由
 
-Recommended repository name: `exam-date-alert`
+資格試験の日程は毎年変わり、方式の変更（紙→CBT）や中止も起こる。
+まとめサイトに古い日付が残っていると、それを見た人が申込期間を逃す。
+年1回の試験では影響が1年になる。
 
-## Domain candidates
+そこで日付は書き写さず、**公式の日程ページへの直リンク**を置く。
+リンク先は掲載時に実際に開いて表示を確認している（`src/exams.json` の `confirmedOn`）。
 
-Confirmed domain: `examdate.jp`
+## 中身の直し方
 
-Other candidates:
+`src/exams.json` を編集して `npm run build`。
 
-- `examdate.jp`
-- `shikakuday.jp`
-- `examalert.jp`
-- `shikenwatch.jp`
-
-## Concept
-
-行政書士、宅建、FPなどの試験日、申込期限、出題予想を通知し、教材・模試へ送客する。
-
-## Technical Selection
-
-- Frontend: Vite + React 19
-- Styling: Plain CSS
-- Initial data: Static alert seed records in `src/App.jsx`
-- Local state: localStorage for MVP saved alerts and UGC requests
-- Notification integrations: LINE Messaging API, X API, transactional email provider, Slack Incoming Webhooks
-- Future data layer: Supabase or Cloudflare D1
-- SEO/AIO/LLMO: structured data, answer block, FAQ, sitemap, robots and `llms.txt`
-
-## Revenue Paths
-
-- 教材販売
-- 模試販売
-- 講座送客
-- メールスポンサー
-- 月額課金
-
-## Commands
-
-```bash
-npm install
-npm run dev
-npm run lint
-npm run build
 ```
+npm run build   # node scripts/build-site.mjs
+```
+
+`dist/` に静的HTMLが出る。`main` へ push すると Actions が `dist/` を
+Xserver へ rsync する。
+
+## 追加するときの決まり
+
+- **公式ページのURLを実際に開いて、200が返ることを確かめてから**追加する
+- 実施回数・時期は、公式に公表されている範囲だけ書く（推測しない）
+- 合格率・難易度ランキング・予備校比較は載せない
